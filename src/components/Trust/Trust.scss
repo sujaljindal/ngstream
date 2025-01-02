@@ -1,19 +1,62 @@
-.trust{
-    background-color: #08071a;
-    .trustContainer{
-        display: flex;
-        padding: 11.111vw 0px;
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-        h1{
-            font-weight: 700;
-            // display: flex;
-            // flex-direction: column;
-            // align-items: center;
-            gap: 1.111vw;
-            font-size: 1.667vw;
-            color: wheat;
-        }
+.trust {
+  background-color: #08071a;
+  box-sizing: border-box; /* Ensures padding does not cause overflow */
+
+  .trustContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 11.111vw 0; /* Adjust padding as needed */
+    gap: 40px;
+
+    h1 {
+      font-weight: 700;
+      font-size: 1.667vw;
+      color: wheat;
+      gap: 1.111vw;
+      text-align: center;
     }
+  }
+
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .trustContainer {
+      padding: 8vw 0; /* Slightly smaller padding for tablet screens */
+    }
+
+    h1 {
+      font-size: 2.5vw;
+    }
+  }
+
+  @media (max-width: 810px) {
+    .trustContainer {
+      padding: 5vw 0; /* Adjust for this breakpoint to avoid overflow */
+    }
+
+    h1 {
+      font-size: 3.5vw;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .trustContainer {
+      padding: 4vw 0;
+    }
+
+    h1 {
+      font-size: 3.8vw;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .trustContainer {
+      padding: 8vw 0;
+      gap: 20px;
+    }
+
+    h1 {
+      font-size: 5vw;
+    }
+  }
 }

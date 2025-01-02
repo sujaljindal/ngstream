@@ -24,7 +24,7 @@ function App() {
       <Why></Why>
       <Trust></Trust>
       <Faq></Faq>
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </div>
   )
 }

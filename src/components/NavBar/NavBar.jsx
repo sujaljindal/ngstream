@@ -10,7 +10,7 @@ const NavBar = () => {
         <div className="navbarleft">
             <img src={logo} alt="" />
             <ul>
-                <li>Products</li>
+                <li>Products <span>▼</span></li>
                 <li>Services</li>
                 <li>Company</li>
             </ul>

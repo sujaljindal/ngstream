@@ -1,52 +1,86 @@
 .Solution {
-    background-color: #080719;
-    height: 100vh;
+  background-color: #080719;
+  // min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+
+  h2 {
+    background: linear-gradient(92deg, #A265FF -5.58%, #F88696 29.61%, #FBBA6E 64.81%, #FFE5B5 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  h4 {
+    color: white;
+    margin-bottom: 2rem;
+  }
+
+  .solutionCard {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 2rem;
-    
-  
-    h2 {
-      background: linear-gradient(92deg, #A265FF -5.58%, #F88696 29.61%, #FBBA6E 64.81%, #FFE5B5 100%);
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-    h4{
-        color: white;
-        margin-bottom: 2rem;
-    }
-  
-    .solutionCard {
-      .solutioncardimg {
-        display: flex;
-        flex-direction: column;
-        .img {
-          
-            img{
-                width: 15vw;
-                height: 435px;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                transition: transform 0.3s ease;
-            } 
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .solutioncardimg {
+      display: flex;
+      flex-wrap: wrap;
+
+      .img {
+        position: relative;
+
+        img {
+          width: 240px;
+          height: 435px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease;
+        }
+
+        .imagedata {
+          position: absolute;
+          left: 0;
+          color: white;
+          width: 100%;
+          padding: 1rem;
+          background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1));
+          text-align: center;
+          transition: bottom 0.6s ease; 
+          opacity: 0;
+        }
+
+        &:hover .imagedata {
+          bottom: 0;
+          opacity: 1;
+        }
+
+        h1 {
+          display: block;
+          background: linear-gradient(135deg, #A265FF 10%, #F88696 50%, #FBBA6E 90%, #FFE5B5 100%);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-size: 1.2vw;
+          font-style: normal;
+          font-weight: 600;
+          margin: 0;
         }
       }
     }
-  
-    ::-webkit-scrollbar {
-      height: 8px;
-    }
-  
-    ::-webkit-scrollbar-thumb {
-      background: #A265FF;
-      border-radius: 10px;
-    }
-  
-    ::-webkit-scrollbar-track {
-      background: #080719;
-    }
   }
-  
+
+  ::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #A265FF;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #080719;
+  }
+}

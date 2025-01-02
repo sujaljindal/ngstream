@@ -1,0 +1,19 @@
+.trust{
+    background-color: #08071a;
+    .trustContainer{
+        display: flex;
+        padding: 11.111vw 0px;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        h1{
+            font-weight: 700;
+            // display: flex;
+            // flex-direction: column;
+            // align-items: center;
+            gap: 1.111vw;
+            font-size: 1.667vw;
+            color: wheat;
+        }
+    }
+}

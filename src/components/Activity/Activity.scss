@@ -1,0 +1,192 @@
+:root {
+    --font-family: "Inter", sans-serif;
+    --primary-gradient: linear-gradient(135deg, #A265FF 10%, #F88696 50%, #FBBA6E 90%, #FFE5B5 100%);
+    --secondary-gradient: linear-gradient(180deg, rgba(220, 220, 240, 0.5) 26.56%, rgba(255, 255, 255, 0) 100%);
+    --text-color: #1c2739;
+    --background-color: white;
+    --btn-bg-color: #dcdcf0;
+    --btn-text-color: black;
+    --btn-hover-color: #bcbcd8;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.activity {
+    padding: 2rem 5rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: var(--secondary-gradient);
+
+    h1 {
+        font-size: 1.5em;
+        font-weight: 700;
+    }
+
+    h2 {
+        font-size: 1em;
+        font-weight: 500;
+        margin-top: 0.5rem;
+        line-height: 1.2;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .btncontainer {
+        padding: 0.5rem 5rem;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        overflow-y: hidden;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            min-width: fit-content;
+            min-height: 2.5rem;
+            border: none;
+            background-color: var(--btn-bg-color);
+            color: var(--btn-text-color);
+            font-size: 1em;
+            font-weight: 700;
+            cursor: pointer;
+            margin-right: 20px;
+            font-family: var(--font-family);
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: var(--btn-hover-color);
+            }
+        }
+    }
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+    padding: 1rem 12%;
+    flex-wrap: wrap;
+
+    .contentdata {
+        width: 33%;
+        position: relative;
+        animation: contentIn 0.75s normal ease-in-out;
+        text-align: left;
+
+        h1 {
+            font-size: 1.5em;
+            font-weight: 800;
+
+            span {
+                background: var(--primary-gradient);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            }
+        }
+
+        p {
+            margin-top: 2rem;
+            color: var(--text-color);
+            font-size: 1em;
+            font-weight: 400;
+        }
+
+        button {
+            display: flex;
+            margin-top: 2rem;
+            height: 4rem;
+            padding: 1rem 1.5rem;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            border-radius: 4px;
+            border: 1px solid var(--text-color);
+            background: var(--background-color);
+            color: var(--text-color);
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+
+            &:hover {
+                background-color: var(--text-color);
+                color: var(--background-color);
+            }
+        }
+    }
+
+    .contentimage {
+        img {
+            width: 100%;
+            max-width: 540px;
+            border-radius: 5px;
+        }
+    }
+}
+
+.services {
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .activity {
+        padding: 1rem;
+    }
+
+    .content {
+        flex-direction: column;
+        padding: 1rem;
+
+        .contentdata {
+            width: 100%;
+            text-align: center;
+        }
+
+        .contentimage img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    .container {
+        .btncontainer {
+            flex-direction: column;
+            gap: 1rem;
+
+            button {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+@keyframes contentIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

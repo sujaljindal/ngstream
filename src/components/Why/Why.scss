@@ -99,8 +99,14 @@
       }
   
       .rightcont {
-        grid-template-columns: 1fr; /* Stack the items vertically */
-        margin-top: 1.5rem;
+        .rightdata{
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          gap: 1rem;
+          padding: 0.5rem;
+          scrollbar-width: none;
+          overflow-y: hidden;
+        }
       }
   
       .rightdata {

@@ -1,12 +1,12 @@
 .trust {
   background-color: #08071a;
-  box-sizing: border-box; /* Ensures padding does not cause overflow */
+  box-sizing: border-box; 
 
   .trustContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 11.111vw 0; /* Adjust padding as needed */
+    padding: 11.111vw 0; 
     gap: 40px;
 
     h1 {
@@ -18,10 +18,10 @@
     }
   }
 
-  /* Responsive Design */
+
   @media (max-width: 1024px) {
     .trustContainer {
-      padding: 8vw 0; /* Slightly smaller padding for tablet screens */
+      padding: 8vw 0; 
     }
 
     h1 {
@@ -31,7 +31,7 @@
 
   @media (max-width: 810px) {
     .trustContainer {
-      padding: 5vw 0; /* Adjust for this breakpoint to avoid overflow */
+      padding: 5vw 0; 
     }
 
     h1 {
@@ -46,9 +46,11 @@
 
     h1 {
       font-size: 3.8vw;
-    }
   }
-
+  img{
+    object-fit: contain;
+  }
+}
   @media (max-width: 480px) {
     .trustContainer {
       padding: 8vw 0;

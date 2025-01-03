@@ -1,29 +1,30 @@
 .Solution {
   background-color: #080719;
-  // min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2rem;
   padding-top: 0;
+  
   position: relative;
-  .container{
+
+  .container {
     position: relative;
     overflow: hidden;
     width: 100vw;
     height: 6rem;
     background-color: #ffffff;
     z-index: 1;
-    .shape{
-    content: "";
-    position: absolute;
-    left: -25%;
-    height: 330%;
-    width: 150%;
-    background-color: #080719;
-    // background: linear-gradient(72deg, #080719 4.11%, #080719 19.11%, #2c2d44 93.09%);
-    -webkit-clip-path: ellipse(37% 50%);
-    clip-path: ellipse(37% 50%);
+
+    .shape {
+      content: "";
+      position: absolute;
+      left: -25%;
+      height: 330%;
+      width: 150%;
+      background-color: #080719;
+      -webkit-clip-path: ellipse(37% 50%);
+      clip-path: ellipse(37% 50%);
     }
   }
 
@@ -45,10 +46,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    width: 100%;
 
     .solutioncardimg {
       display: flex;
-      flex-wrap: wrap;
+      // flex-wrap: nowrap;
+      overflow-y: hidden;
+      justify-content: flex-start;
+      gap: 20px;
+      overflow-x: auto;
+      padding: 0.5rem;
 
       .img {
         position: relative;
@@ -58,6 +65,7 @@
           height: 435px;
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
           transition: transform 0.3s ease;
+          border-radius: 8px;
         }
 
         .imagedata {
@@ -68,8 +76,9 @@
           padding: 1rem;
           background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1));
           text-align: center;
-          transition: bottom 0.6s ease; 
+          transition: bottom 0.6s ease;
           opacity: 0;
+          bottom: -100%;
         }
 
         &:hover .imagedata {
@@ -84,7 +93,6 @@
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           font-size: 1.2vw;
-          font-style: normal;
           font-weight: 600;
           margin: 0;
         }
@@ -104,4 +112,38 @@
   ::-webkit-scrollbar-track {
     background: #080719;
   }
+
+  @media screen and (max-width: 1080px) {
+    .solutioncardimg {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 1rem;
+      padding: 0.5rem;
+      scrollbar-width: none;
+      overflow-y: hidden;
+    }
+    
+    .img {
+      width: 100%;
+      height: auto;
+    }
+
+    h1 {
+      font-size: 3vw;
+    }
+  }
+
+  // @media screen and (max-width: 768px) {
+  //   .solutionCard {
+  //     .solutioncardimg {
+  //       flex-wrap: wrap;
+  //       justify-content: space-between;
+  //     }
+  //   }
+
+  //   .img {
+  //     width: 100%;
+  //     height: auto;
+  //   }
+  // }
 }

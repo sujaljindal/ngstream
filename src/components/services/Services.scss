@@ -8,13 +8,18 @@
     margin-bottom: 2rem;
     font-size: 2rem;
   }
-  .grid{
-    padding: 0 16.5rem;
-    display: flex
-;
+
+  .grid {
+    padding: 0 10rem;
+    display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 600px) {
+      padding: 0 2rem;
+    }
   }
+
   .services-grid {
     margin: 4.861vw 0;
     display: grid;
@@ -26,8 +31,8 @@
     .service-card {
       position: relative;
       overflow: hidden;
-      width: fit-content;
       max-width: 300px;
+      width: 100%;
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       cursor: pointer;
@@ -39,9 +44,8 @@
 
       img {
         width: 100%;
-        
-        height: 100%;
-        display: block;
+        height: 200px;
+        object-fit: cover;
         border-radius: 10px;
       }
 
@@ -60,9 +64,8 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        transform: translateY(0);
+        transform: translateY(100%);
         transition: transform 0.5s ease-in-out;
-        overflow-y: auto;
 
         h2 {
           font-size: 1.5rem;
@@ -75,23 +78,41 @@
         }
       }
 
-      &.active .service-content {
-        top: 0;
-        transform: translateY(0); /* Ensure smooth upward reveal */
+      &:hover .service-content {
+        transform: translateY(0);
       }
     }
   }
 
-  /* Responsive design for smaller screens */
   @media (max-width: 768px) {
     .services-grid {
-      grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+      width: auto;
+      height: auto;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .services-grid {
+      display: flex;
+      overflow-x: auto;
+      flex-wrap: nowrap;
+      gap: 1rem;
+      padding: 1rem 0;
+      scrollbar-width: none;
+    }
+
+    .service-card {
+      min-width: 250px;
+      margin-right: 1rem;  
     }
   }
 
   @media (max-width: 480px) {
     .services-grid {
-      grid-template-columns: 1fr; /* 1 column on smaller screens */
+      grid-template-columns: 1fr;
+    }
+    .service-card img {
+      height: auto; 
     }
   }
 }

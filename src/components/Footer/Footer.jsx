@@ -26,7 +26,7 @@ const Footer = () => {
                 <ul>
                     <h1>Products</h1>
                     <li>QoE/QoS</li>
-                    <li>Trnascoding</li>
+                    <li>Transcoding</li>
                     <li>Content Enrichment</li>
                     <li>Social Analytics</li>
                     <li>Set Top Box</li>
@@ -52,21 +52,10 @@ const Footer = () => {
             <div className="footercontentmiddle">
                 <h1>Other Links</h1>
                 <ul>
-                    <li>Terms</li>
                     <li>Policy</li>
-                    <li>Cookies</li>
-                    <li>Help Center</li>
                 </ul>
             </div>
-            <div className="footercontentmiddle">
-                <h1>Other Links</h1>
-                <ul>
-                    <li>Terms</li>
-                    <li>Policy</li>
-                    <li>Cookies</li>
-                    <li>Help Center</li>
-                </ul>
-            </div>
+
             <div className="footercontentright">
             <h1>Quick Connect</h1>
             <div className="call">

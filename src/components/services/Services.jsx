@@ -55,7 +55,8 @@ const Services = () => {
 
   return (
     <div className="services-container">
-      <h1>Services We Offer</h1>
+      <h1>Robust Hosting, Monetisation, and Broadcasting Capabilities</h1>
+      <h4>Solid infrastructure for content delivery, revenue generation, and seamless broadcasting.</h4>
       <div className="grid">
         <div className="services-grid">
           {services.map((service) => (

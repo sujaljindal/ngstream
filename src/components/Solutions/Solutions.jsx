@@ -8,6 +8,9 @@ import img4 from '../../assets/solution4.png'
 const Solutions = () => {
   return (
     <div className='Solution'>
+        <div className="container">
+            <div className="shape"></div>
+        </div>
         <h2>Innovative solutions tailored for diverse business landscapes</h2>
         <h4>Power up ypur online business on the rock-solid foundation created by  NGStreams.</h4>
         <div className="solutionCard">

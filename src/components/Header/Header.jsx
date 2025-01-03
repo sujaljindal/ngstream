@@ -57,6 +57,9 @@ const Header = () => {
           ))}
         </div>
       </div>
+      <div className="container">
+            <div className="shape"></div>
+      </div>
     </div>
   );
 };

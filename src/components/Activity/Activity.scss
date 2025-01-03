@@ -148,8 +148,8 @@ body {
 
     .contentimage {
         img {
-            width: 100%;
-            max-width: 540px;
+            width: 720px;
+            // max-width: 720px;
             border-radius: 5px;
         }
     }
@@ -218,4 +218,26 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+@media (max-width: 1380px) {
+    .content {
+        flex-direction: column-reverse;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .contentimage {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .contentdata {
+        width: 80%;
+        text-align: center;
+
+    }
+
 }

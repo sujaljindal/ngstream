@@ -1,5 +1,5 @@
 .services-container {
-  padding: 5.556vw;
+  // padding: 5.556vw;
   background-color: #f9f9f9;
   text-align: center;
 
@@ -14,7 +14,6 @@
   }
 
   .grid {
-    // padding: 0 10rem;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -28,10 +27,15 @@
   .services-grid {
     margin: 4.861vw 0;
     display: grid;
+    padding: 0 10%;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 1rem;
     column-gap: 1rem;
     justify-items: center;
+    @media screen and (min-width: 1400px) {
+        padding: 0 25rem;
+      
+    }
 
     .service-card {
       position: relative;
@@ -56,31 +60,35 @@
 
       .service-content {
         position: absolute;
-        top: 100%;
         left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.8);
         color: white;
+        width: 100%;
         padding: 1rem;
-        border-radius: 10px;
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1));
+        text-align: center;
+        transition: bottom 0.6s ease;
+        opacity: 0;
+        top: 0;
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
-        text-align: center;
-        transform: translateY(100%);
-        transition: transform 0.5s ease-in-out;
+        flex-direction: column;
+      }
 
-        h2 {
-          font-size: 1.5rem;
-          margin-bottom: 1rem;
-        }
+      &:hover .service-content {
+        bottom: 0;
+        opacity: 1;
+      }
 
-        p {
-          font-size: 1rem;
-          line-height: 1.5;
-        }
+      h2 {
+        display: block;
+        background: linear-gradient(135deg, #A265FF 10%, #F88696 50%, #FBBA6E 90%, #FFE5B5 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 1.2vw;
+        font-weight: 600;
+        margin: 0;
       }
 
       &:hover .service-content {
@@ -90,18 +98,8 @@
   }
 
   @media (max-width: 768px) {
-    .services-grid {
-      width: auto;
-      height: auto;
-      img{
-        width: 100%;
-        height: auto;
-      }
-    }
-  }
-
-  @media (max-width: 768px) {
     padding: 10px;
+
     .services-grid {
       display: flex;
       overflow-x: scroll;
@@ -109,8 +107,7 @@
       // padding: 1rem 0;
       scrollbar-width: none;
     }
-  
-    
+
 
     .service-card {
       min-width: 250px;
@@ -120,12 +117,14 @@
   }
 
   @media (max-width: 480px) {
-    .services-grid {
-      grid-template-columns: 1fr;
-    }
+    // .services-grid {
+    //   grid-template-columns: 1fr;
+    //   display: grid;
+    // }
 
     .service-card img {
       height: auto;
+      width: fit-content;
     }
   }
 }

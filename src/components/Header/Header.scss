@@ -25,6 +25,13 @@
           font-weight: bold;
           line-height: 51.2px;
           letter-spacing: 1px;
+          @media screen and (max-width: 480px) {
+            
+                font-size: 1.5rem;
+                
+              
+            
+          }
   
           span {
             background: linear-gradient(
@@ -100,7 +107,7 @@
     }
   
     .cards {
-      padding: 1rem;
+      // padding: 1rem;
       margin-top: 5rem;
   
       .card {
@@ -114,10 +121,10 @@
         }
         @media screen and (max-width: 1080px) {
             display: flex;
-            flex-wrap: nowrap;
             overflow-x: auto;
             scrollbar-width: none;
-            padding: 0.5rem;
+            // padding: 0.5rem;
+            margin: 0;
             
         }
   
@@ -185,5 +192,6 @@
         
       }
     }
+   
   }
   

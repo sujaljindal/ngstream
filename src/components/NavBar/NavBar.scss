@@ -87,6 +87,24 @@
             &:hover {
               .dropdown {
                 display: block;
+                width: 283px;
+                height: auto;
+                padding: 32px;
+                left: 0px;
+                top: 25px;
+                position: absolute;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 8px;
+                display: inline-flex;
+                border-image: linear-gradient(90deg, #4d21ca 0%, #cc2190 40%, #d84a79 58%, #f6953c 82%, #ffbe3b 100%);
+                border-bottom: 12px solid;
+                border-top: 12px solid;
+                border-image-slice: 1;
+                border-width: 2px;
+                opacity: 0px;
+
               }
             }
           }
@@ -112,5 +130,6 @@
         }
       }
     }
+    
   }
   

@@ -22,7 +22,7 @@ const NavBar = () => {
       <div className='navbar'>
         <div className="navbarleft">
           <img src={logo} alt="Logo" />
-          {/* <img src={hamburger} alt="" /> */}
+          <img className="hamburger "src={hamburger} alt="" />
           
           <div className="hamburger" onClick={toggleMenu}>
             <span className={menuOpen ? "open" : ""}>☰</span>
@@ -33,9 +33,12 @@ const NavBar = () => {
               Products <span>▼</span>
               {activeList === 'products' && (
                 <div className="dropdown">
-                  <Link to="/product1"><p>Product 1</p></Link>
-                  <Link to="/product2"><p>Product 2</p></Link>
-                  <Link to="/product3"><p>Product 3</p></Link>
+                  <Link to="/product1"><p>Ad Insertion And Targeting</p></Link>
+                  <Link to="/product2"><p>Smart Meta Data</p></Link>
+                  <Link to="/product3"><p>CRA</p></Link>
+                  <Link to="/product4"><p>VR OTT Watch</p></Link>
+                  <Link to="/product5"><p>SeTTop Box</p></Link>
+
                 </div>
               )}
             </li>
@@ -47,7 +50,6 @@ const NavBar = () => {
               {activeList === 'company' && (
                 <div className="dropdown">
                   <Link to="/about-us"><p>About Us</p></Link>
-                  <Link to="/careers"><p>Careers</p></Link>
                   <Link to="/contact"><p>Contact</p></Link>
                 </div>
               )}

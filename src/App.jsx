@@ -10,6 +10,7 @@ import Faq from './components/Faq/Faq'
 import Services from './components/services/Services'
 import Why from './components/Why/Why'
 import Solutions from './components/Solutions/Solutions'
+import PhoneNav from './components/PhoneNav/PhoneNav'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -25,6 +26,7 @@ function App() {
       <Trust></Trust>
       <Faq></Faq>
       <Footer></Footer>
+      <PhoneNav></PhoneNav>
     </div>
   )
 }

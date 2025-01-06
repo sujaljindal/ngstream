@@ -8,15 +8,18 @@
     .phone {
       display: flex;
       position: fixed;
-      padding: 10px;
+      // padding: 10px;
       flex-direction: flex-start;
       bottom: 0;
       left: 0;
       width: 100%;
-      z-index: 1000;
+      height: auto;
+      // z-index: 100;
       background-color: #0a0514;
       gap: 1rem;
       border-top: white 0.5px solid;
+            
+      
     }
   
     .navContainer {

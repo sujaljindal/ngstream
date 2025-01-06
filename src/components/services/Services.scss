@@ -86,9 +86,12 @@
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        font-size: 1.2vw;
+        font-size: 1.1rem;
         font-weight: 600;
-        margin: 0;
+        margin-bottom: 10px;
+      }
+      p{
+        font-size: 0.9rem;
       }
 
       &:hover .service-content {
@@ -113,6 +116,15 @@
       min-width: 250px;
       margin-right: 1rem;
       height: auto;
+      .service-content{
+        h2 {
+          font-size: 1rem;
+        }
+        p{
+          font-size: 0.8rem;
+          // font-weight: 200;
+        }
+      }
     }
   }
 

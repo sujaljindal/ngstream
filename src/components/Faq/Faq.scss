@@ -82,11 +82,14 @@
     @media (max-width: 768px) {
       .head h1 {
         font-size: 2rem;
+        margin-bottom: 0.5rem;
       }
   
       .head h3 {
         font-size: 1rem;
+        margin-bottom: 0.5rem;
       }
+    
   
       .questions {
         padding: 0 1rem;
@@ -118,6 +121,9 @@
     @media (max-width: 480px) {
       .head h1 {
         font-size: 1.8rem;
+      }
+      .head h3{
+        font-size: 0.9rem;
       }
   
       .questions {

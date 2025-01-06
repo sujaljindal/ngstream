@@ -55,6 +55,8 @@ body {
         gap: 0.5rem;
         max-width: 100%;
         box-sizing: border-box;
+        scrollbar-width: none;
+        
 
         scrollbar-width: thin;
         scrollbar-color: var(--btn-hover-color) transparent;

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './Activity.scss';
 import ad from '../../assets/ad insertion.png';
 import a from '../../assets/11.png';
@@ -8,7 +8,6 @@ import d from '../../assets/14.png';
 import e from '../../assets/15.png';
 import f from '../../assets/16.png';
 import g from '../../assets/17.png';
-
 
 const Activity = () => {
     const buttons = [
@@ -103,6 +102,7 @@ const Activity = () => {
     ];
 
     const [currentId, setCurrentId] = useState(buttons[0].id);
+    const buttonRefs = useRef([]);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -115,44 +115,56 @@ const Activity = () => {
         return () => clearInterval(interval);
     }, [buttons]);
 
+    // useEffect(() => {
+    //     const activeButton = buttonRefs.current[currentId];
+    //     if (activeButton) {
+    //         activeButton.scrollIntoView({
+    //             behavior: 'smooth',
+    //             block: 'nearest',
+    //             inline: 'center',
+    //         });
+    //     }
+    // }, [currentId]);
+
     const currentContent = buttons.find((button) => button.id === currentId)?.Content;
 
     return (
-        <>
-            <section className="activity">
-                <h1>Accelerate to a digital future with our products</h1>
-                <h2>
-                    Customer centricity, innovation, and ethical corporate governance are at our core.
-                </h2>
-                <div className="container">
-                    <div className="btncontainer">
-                        {buttons.map((button) => (
-                            <button
-                                key={button.id}
-                                onClick={() => {
-                                    setCurrentId(button.id);
-                                }}
-                                className={currentId === button.id ? "active" : ""}
-                                aria-label={button.label}
-                            >
-                                {button.label}
-                            </button>
-                        ))}
+        <section className="activity">
+            <h1>Accelerate to a digital future with our products</h1>
+            <h2>
+                Customer centricity, innovation, and ethical corporate governance are at our core.
+            </h2>
+            <div className="container">
+                <div className="btncontainer">
+                    {buttons.map((button) => (
+                        <button
+                            ref={(e) => (buttonRefs.current[button.id] = e)}
+                            style={{
+                                background: currentId === button.id ? "black" : "transparent",
+                                color: currentId === button.id ? "white" : "black",
+                            }}
+                            key={button.id}
+                            onClick={() => setCurrentId(button.id)}
+                            className={currentId === button.id ? "active" : ""}
+                            aria-label={button.label}
+                        >
+                            {button.label}
+                        </button>
+                    ))}
+                </div>
+                <div className="content">
+                    <div className="contentdata">
+                        <h1>{currentContent.heading}</h1>
+                        <span>{currentContent.spanText}</span>
+                        <p>{currentContent.para}</p>
+                        <button>{currentContent.btnText}</button>
                     </div>
-                    <div className="content">
-                        <div className="contentdata">
-                            <h1>{currentContent.heading}</h1>
-                            <span>{currentContent.spanText}</span>
-                            <p>{currentContent.para}</p>
-                            <button>{currentContent.btnText}</button>
-                        </div>
-                        <div className="contentimage">
-                            <img src={currentContent.img} alt={currentContent.heading} />
-                        </div>
+                    <div className="contentimage">
+                        <img src={currentContent.img} alt={currentContent.heading} />
                     </div>
                 </div>
-            </section>
-        </>
+            </div>
+        </section>
     );
 };
 

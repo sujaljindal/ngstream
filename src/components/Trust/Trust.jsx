@@ -14,7 +14,7 @@ const Trust = () => {
             <h1>Trusted by</h1>
             <marquee behavior direction="left" scrollamount="5" className="trustimagecontainer">
                 {clients.map((image,index)=>(
-                    <img key={index} src={image} alt={`Client ${index + 1}`} />
+                    <img key={index} src={image}  />
                 ))}
             </marquee>
         </div>     
